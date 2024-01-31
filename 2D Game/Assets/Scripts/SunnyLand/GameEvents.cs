@@ -7,15 +7,15 @@ public class GameEvents : MonoBehaviour
 {
     public static GameEvents instance;
 
-    void Awake(){
+    public void Awake(){
         instance = this;
     }
     
-    public event Action onJump;
+    public event Action onJumpTrigger;
 
-    public void jumpTrigger(){
-        if(onJump != null){
-            onJump();
+    public void iAmActivatingTheJumpTrigger(){
+        if(onJumpTrigger != null){
+            onJumpTrigger();
         }
     }
 

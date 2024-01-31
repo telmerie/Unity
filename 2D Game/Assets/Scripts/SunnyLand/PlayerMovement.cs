@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rigidBody.velocity = new Vector2(rigidBody.velocity.x, jump);
                 animator.SetTrigger("jumping");
-                GameEvents.instance.jumpTrigger();
+                GameEvents.instance.iAmActivatingTheJumpTrigger();
 
             }
             else if ((Input.GetKeyUp("left") && !Input.GetKey("right")) || (Input.GetKeyUp("right") && !Input.GetKey("left")))
