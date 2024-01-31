@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!GameController.isPaused)
         {
-            Debug.Log("Grounded" + grounded);
+            
             if (!grounded)
             {
                 animator.SetFloat("y", rigidBody.velocity.y);
@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rigidBody.velocity = new Vector2(rigidBody.velocity.x, jump);
                 animator.SetTrigger("jumping");
+                GameEvents.instance.jumpTrigger();
 
             }
             else if ((Input.GetKeyUp("left") && !Input.GetKey("right")) || (Input.GetKeyUp("right") && !Input.GetKey("left")))

@@ -6,12 +6,12 @@ public class GameController : MonoBehaviour
 {
 
     public static bool isPaused = false;
-    public GameObject pauseScreen;
+
     // Start is called before the first frame update
     void Start()
     {
 
-        pauseScreen.SetActive(false);
+        GameEvents.instance.onJump += onJump;
 
 
     }
@@ -23,7 +23,13 @@ public class GameController : MonoBehaviour
         {
             isPaused = !isPaused;
             Time.timeScale = isPaused ? 0 : 1;
-            pauseScreen.SetActive(isPaused);
+
         }
     }
+
+    private void onJump(){
+        print("Player is jumping");
+    }
+
+
 }
