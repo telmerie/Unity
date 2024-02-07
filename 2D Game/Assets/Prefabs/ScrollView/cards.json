@@ -1,50 +1,10 @@
 [
     {
-        "name": "Level One" 
-    },
-    {
-        "name": "Level "
-    },
-    {
-        "name": "Level One" 
-    },
-    {
-        "name": "Level "
-    },
-    {
-        "name": "Level One" 
-    },
-    {
-        "name": "Level "
-    },
-    {
-        "name": "Level One" 
-    },
-    {
-        "name": "Level "
-    },
-    {
-        "name": "Level One" 
-    },
-    {
-        "name": "Level "
-    },
-    {
-        "name": "Level One" 
-    },
-    {
-        "name": "Level "
-    },
-    {
-        "name": "Level One" 
-    },
-    {
-        "name": "Level "
-    },
-    {
-        "name": "Level One" 
-    },
-    {
-        "name": "Level "
+        "name": "Level One" ,
+        "levels": {
+            "one": 1,
+            "two": 2,
+            "Tree": 3
+        }
     }
 ]
