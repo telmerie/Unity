@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.instance.timesReloaded();
         // instance = this;
 
     }
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown("up") && grounded)
             {
+                GameManager.instance.timesReloaded();
                 rigidBody.velocity = new Vector2(rigidBody.velocity.x, jump);
                 animator.SetTrigger("jumping");
                 GameEvents.instance.iAmActivatingTheJumpTrigger();
