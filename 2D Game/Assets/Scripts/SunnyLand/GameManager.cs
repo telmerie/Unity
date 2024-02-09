@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
 
-public enum Scene {
+public enum Scene : int{
     Main,
     Game
 }
@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-    private int realoaded = 0;
-
+    public int realoaded {get; set;} = 0;
+    
     void Awake(){
        
         if(instance != null){
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public void timesReloaded(){
         realoaded ++;
-        print("realoaded: " +realoaded);
+
     }
 
     // Start is called before the first frame update
@@ -43,4 +43,5 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
 }

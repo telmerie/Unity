@@ -27,9 +27,7 @@ public class CardGenerator : MonoBehaviour
         foreach (JObject card in cardArray)
         {
             GameObject newCard = Instantiate(this.cardObject, this.transform);
-            // newCard.GetComponent<Card>().setValues(card["name"].ToString());
-            print("levels" + card["levels"]);
-            print("count" + card["levels"].Count());
+            newCard.GetComponent<Card>().setValues((string)card[name], (string)card["text"]);
 
         }
 
